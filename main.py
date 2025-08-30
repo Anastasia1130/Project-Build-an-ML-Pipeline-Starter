@@ -131,7 +131,7 @@ def go(config: DictConfig):
         if "test_regression_model" in active_steps:
 
             ##################
-            _ + mlflow.run(
+            _ = mlflow.run(
                 os.path.join(hydra.utils.get_original_cwd(), "components", "test_regression_model"),
                 "main",
                 parameters={
